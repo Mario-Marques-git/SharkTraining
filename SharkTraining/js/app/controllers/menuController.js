@@ -5,13 +5,14 @@ const externals = {};
 const buttonHandler = async () =>{
 
     window.location.hash = "#start";
+    menuView.removeElements();
 
 }
 
 externals.start = () =>{
 
     menuView.bind("buttonClick", buttonHandler);
-    menuView.render();
+    menuView.renderMenu();
 
 }
 
