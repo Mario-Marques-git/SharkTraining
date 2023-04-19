@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
+    <title>Quiz Game</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="questions">
-    <h1>Questions</h1>
-        <div id="options">
-           <div id = "quiz" /> 
-        </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-4">Quiz Game</h1>
+      <hr>
+      <div id="quiz"></div>
+      <div id="score" class="text-right mt-4">Score: 0</div>
     </div>
-</body>
+    <script type="module" src="./js/quizz/quizView.js"></script>
+
+    
+  </body>
 </html>

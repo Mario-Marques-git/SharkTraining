@@ -12,6 +12,7 @@ const routes = {
         hash: "#start",
         controller: startController
     }
+    
 };
 
 const defaultRoute = "menu";

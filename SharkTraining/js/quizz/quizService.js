@@ -238,42 +238,9 @@ const questions = [
   }
 ]
 
-
-const questionFactory = () => {
-
-  let questionArr = [];
-
-      for (let i = 0; i < 10; i++) {
-       
-      let question = questions[Math.floor(Math.random()*50)];
-
-      if(!questionArr.includes(question)){
-        questionArr.push(question);
-      }else {
-        i--;
-      }
-
-      }
-
-      correntQuestion(questionArr);
-
-
+export function getQuestions() {
+  return questions;
 }
-
-const correntQuestion = questionArr => {
-
-      
-
-
-}
-
-externals.gameStart = () => {
-
-  questionFactory();
-
-
-}
-
 
 
 
