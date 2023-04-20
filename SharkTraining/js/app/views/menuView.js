@@ -8,7 +8,7 @@ const renderMenuButtons = () =>{
     if(elements.startButton){
         elements.startButton.empty();
     }
-    elements.startButton = $("<center><button id = 'diveIn'>Dive in!</button></center>");
+    elements.startButton = $(`<center><button id = 'diveIn' style="--color: #D9E021;;">Dive in!</button><span></span><span></span><span></span><span></span></center>`);
     elements.startButton.click(handlers["buttonClick"]);
     elements.app.append(elements.startButton);
 
