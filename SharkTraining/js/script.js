@@ -11,7 +11,7 @@ function moveUp() {
   water.style.transform = `translate(0%, ${100 - waterHeight}%)`;
 
   if (waterHeight >= 200) {
-    window.location.href = "/SharkTraining/GameOver.Html"; // Redirect to GameOver.html
+    window.location.href = "../GameOver.html"; // Redirect to GameOver.html
     waterHeight = 0;
     setTimeout(() => {
       water.style.transform = `translate(0%, ${100 - waterHeight}%)`;
