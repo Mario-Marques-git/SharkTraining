@@ -24,4 +24,4 @@ function moveDown() {
 }
 
 restartBtn.addEventListener("click", moveDown);
-setInterval(moveUp, 50); // animate the water element every 50 milliseconds
+setInterval(moveUp, 200); // animate the water element every 50 milliseconds

@@ -52,7 +52,7 @@ export function popUpSharkGame() {
   }
 
 function checkAnswer(button, answer) {
-  if (button.innerText === answer) {
+  if (button.innerText.toLowerCase() === answer.toLowerCase()) {
     score++;
     button.classList.add("btn-success");
   } else {

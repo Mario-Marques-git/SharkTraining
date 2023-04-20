@@ -1,8 +1,11 @@
+
 const externals = {};
 
 const handlers = {};
 
 const elements = {};
+
+
 
 const renderMenuButtons = () =>{
     if(elements.startButton){

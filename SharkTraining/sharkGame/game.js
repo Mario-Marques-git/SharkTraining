@@ -94,12 +94,12 @@ function gameLoop() {
 
   //check if the player escaped with the floater
   if(Math.abs(player.x - floater.x) < (player.size + floater.size) / 2 && Math.abs(player.y - floater.y) < (player.size + floater.size) / 2){
-    alert('Close window to continue quiz!')
+    alert('Well done! Close window to continue quiz!')
   }
 
   // check if the shark caught the player
   if (Math.abs(player.x - shark.x) < (player.size + shark.size) / 2 && Math.abs(player.y - shark.y) < (player.size + shark.size) / 2) {
-    alert('Game over!You should study more...');
+    alert('Game over! Close window to continue quiz!');
     clearInterval(gameInterval);
   }
 }
