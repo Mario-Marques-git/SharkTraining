@@ -18,7 +18,7 @@ const renderInfo = () =>{
     if(elements.introText){
         elements.introText.empty();
     }
-    elements.introText = $('<img id="background" src="js/img/background_homepage-01.png" alt="some text">');
+    elements.introText = $('<img id="background" src="js/img/background_homepage.png" alt="some text">');
     elements.app.append(elements.introText);
 
 }
