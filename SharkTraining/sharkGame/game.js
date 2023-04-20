@@ -1,8 +1,12 @@
 
+var audio = new Audio("./sounds/terror-ambience-7003.mp3");
+
+
 
 // get the canvas and context
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
+
 
 // set up the player and shark
 const player = {
@@ -39,6 +43,9 @@ const drawFloater = () =>{
 
 // set up the game loop
 function gameLoop() {
+  
+
+
   
   // clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -115,3 +122,4 @@ document.addEventListener('keyup', event => {
 
 // start the game loop
 const gameInterval = setInterval(gameLoop, 20);
+audio.play();

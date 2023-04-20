@@ -3,6 +3,7 @@ import { getQuestions } from "./quizQuestions.js";
 let score = 0;
 let askedQuestions = [];
 let sharkGameWindow;
+var drop = new Audio("./sounds/drop-of-water-36948.mp3");
 
 function getRandomQuestion() {
   let questions = getQuestions();
@@ -29,6 +30,7 @@ function displayQuestion() {
     questionHtml += `
           <button id="option-btn"type="button" onclick="checkAnswer(this, '${question.answer}')">${question.options[i]}</button>
     `;
+    
   }
   questionHtml += `
         </div>
@@ -52,6 +54,7 @@ export function popUpSharkGame() {
   }
 
 function checkAnswer(button, answer) {
+  drop.play();
   if (button.innerText.toLowerCase() === answer.toLowerCase()) {
     score++;
     button.classList.add("btn-success");

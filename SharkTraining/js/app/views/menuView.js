@@ -17,6 +17,11 @@ const renderMenuButtons = () =>{
 
 }
 
+
+var seagull = new Audio("./sounds/seagull-14693.mp3");
+
+
+
 const renderInfo = () =>{
     if(elements.introText){
         elements.introText.empty();
@@ -43,6 +48,7 @@ externals.renderMenu = () => {
     elements.app = $("#app");
     renderInfo();
     renderMenuButtons();
+    seagull.play();
 
 }
 

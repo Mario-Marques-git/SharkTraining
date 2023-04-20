@@ -1,3 +1,5 @@
+
+var snd = new Audio('./sounds/toilet-flushing-7059.mp3');
 const restartBtn = document.getElementById("restart-btn");
 const water = document.querySelector(".water");
 const gameOverMsg = document.getElementById("game-over");
@@ -20,6 +22,7 @@ function moveUp() {
 function moveDown() {
   waterHeight = 0;
   water.style.transform = `translate(0%, ${100 - waterHeight}%)`;
+  snd.play();
 }
 
 restartBtn.addEventListener("click", moveDown);
