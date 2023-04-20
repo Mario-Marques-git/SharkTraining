@@ -20,14 +20,14 @@ function displayQuestion() {
   let quizDiv = document.getElementById("quiz");
   let question = getRandomQuestion();
   let questionHtml = `
-    <div class="card mt-4">
+    <div class="question_card">
       <div class="card-body">
         <h5 class="card-title">${question.question}</h5>
         <div class="btn-group-vertical" role="group">
   `;
   for (let i = 0; i < question.options.length; i++) {
     questionHtml += `
-          <button type="button" class="btn btn-secondary" onclick="checkAnswer(this, '${question.answer}')">${question.options[i]}</button>
+          <button id="option-btn"type="button" onclick="checkAnswer(this, '${question.answer}')">${question.options[i]}</button>
     `;
   }
   questionHtml += `

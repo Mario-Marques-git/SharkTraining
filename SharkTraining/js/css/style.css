@@ -1,0 +1,105 @@
+#main-text{
+  background-color: transparent;
+}
+
+form{
+  font-size:0.6cm
+}
+
+#background{
+  margin-left: 0%;
+  margin-top: 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#playerInfo{
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+#returnMainPage{
+  margin-left: -1%;
+  margin-top: 5%;
+}
+#startGame{
+  margin-left: -1%;
+  margin-top: 9%;
+}
+#submit-btn{
+  position: absolute;
+  margin-left: 6%;
+  margin-top: 1%;
+}
+
+#option-btn{
+  margin-top: 1%;
+  display: inline-block;
+  
+  
+}
+button{
+  
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+
+#diveIn {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -40%;
+  }
+
+  
+
+  .question_card{
+    
+    text-align: center;
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    
+    display:flex;
+    justify-content: center;
+    margin-left: 20%;
+    margin-top: 5%;
+    
+  }
+
+  img{
+    
+    margin-top: -20%;
+    width: 100%;
+    height: 100;
+
+  }
+
+  
+
+
+
+ 

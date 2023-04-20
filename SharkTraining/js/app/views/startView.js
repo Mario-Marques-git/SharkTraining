@@ -32,7 +32,7 @@ const renderForm = () =>{
                                         <input class="form-control d-block" id="playerName" type="text" placeholder="Enter your name">
                                     </div>
                                     <div class="container space">
-                                        <button type="submit" class="btn btn-success" id="enterPlayerName">Submit</button>
+                                        <button id="submit-btn" type="submit" class="btn btn-success" id="enterPlayerName">Submit</button>
                                     </div>
                                 </form>
                             </div>`);
