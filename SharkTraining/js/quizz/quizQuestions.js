@@ -1,5 +1,6 @@
-
-
+export function getQuestions() {
+  return questions;
+}
 
 const questions = [  {    
 question: "What is the purpose of the HTML <head> element?",    
@@ -442,16 +443,3 @@ answer: "To control the width and height of the padding area of an element"
     answer: "The Strategy design pattern is a behavioral design pattern that enables an algorithm's behavior to be selected at runtime"
   }
 ];
-
-
-
-
-
-
-
-export function getQuestions() {
-  return questions;
-}
-
-
-

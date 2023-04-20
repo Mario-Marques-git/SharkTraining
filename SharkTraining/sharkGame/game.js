@@ -1,3 +1,5 @@
+
+
 // get the canvas and context
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
@@ -20,6 +22,20 @@ const shark = {
   image: new Image()
 };
 shark.image.src = './lib/shark.png';
+
+//added stuff for floater and timer
+const floater = {
+  x: Math.random() * 400,
+  y: Math.random() * 400,
+  speed: 0,
+  size: 50,
+  image: new Image()
+};
+floater.image.src = './lib/floater.png';
+
+const drawFloater = () =>{
+  ctx.drawImage(floater.image, floater.x - floater.size / 2, floater.y - floater.size / 2, floater.size, floater.size);
+};
 
 // set up the game loop
 function gameLoop() {
@@ -73,6 +89,14 @@ function gameLoop() {
   // draw the shark
   ctx.drawImage(shark.image, shark.x - shark.size / 2, shark.y - shark.size / 2, shark.size, shark.size);
   
+  //more added stuff for timer
+  setTimeout(drawFloater, 5000);
+
+  //check if the player escaped with the floater
+  if(Math.abs(player.x - floater.x) < (player.size + floater.size) / 2 && Math.abs(player.y - floater.y) < (player.size + floater.size) / 2){
+    alert('Close window to continue quiz!')
+  }
+
   // check if the shark caught the player
   if (Math.abs(player.x - shark.x) < (player.size + shark.size) / 2 && Math.abs(player.y - shark.y) < (player.size + shark.size) / 2) {
     alert('Game over!You should study more...');

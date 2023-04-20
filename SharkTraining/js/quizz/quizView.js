@@ -1,7 +1,8 @@
-import { getQuestions } from "./quizService.js";
+import { getQuestions } from "./quizQuestions.js";
 
 let score = 0;
 let askedQuestions = [];
+let sharkGameWindow;
 
 function getRandomQuestion() {
   let questions = getQuestions();
@@ -37,12 +38,26 @@ function displayQuestion() {
   quizDiv.innerHTML = questionHtml;
 }
 
+export function popUpSharkGame() {
+  sharkGameWindow = window.open('', 'newWindow', 'width=800,height=800');
+  sharkGameWindow.document.write(`<html><head><title>My Shark Game</title></head><body></body></html>`);
+  var body = sharkGameWindow.document.body;
+  var iframe = document.createElement('iframe');
+  iframe.src = 'sharkGame/index.html';
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  body.appendChild(iframe);
+
+  return sharkGameWindow;
+  }
+
 function checkAnswer(button, answer) {
   if (button.innerText === answer) {
     score++;
     button.classList.add("btn-success");
   } else {
     button.classList.add("btn-danger");
+    popUpSharkGame();
   }
   document.getElementById("score").innerText = `Score: ${score}`;
   setTimeout(displayQuestion, 1000);
@@ -50,3 +65,6 @@ function checkAnswer(button, answer) {
 window.checkAnswer = checkAnswer;
 
 displayQuestion();
+
+
+
