@@ -5,6 +5,7 @@ let askedQuestions = [];
 let sharkGameWindow;
 var drop = new Audio("./sounds/drop-of-water-36948.mp3");
 
+
 function getRandomQuestion() {
   let questions = getQuestions();
   let randomIndex = Math.floor(Math.random() * questions.length);
@@ -41,6 +42,7 @@ function displayQuestion() {
 }
 
 export function popUpSharkGame() {
+  
   sharkGameWindow = window.open('', 'newWindow', 'width=800,height=800');
   sharkGameWindow.document.write(`<html><head><title>My Shark Game</title></head><body></body></html>`);
   var body = sharkGameWindow.document.body;
