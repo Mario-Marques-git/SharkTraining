@@ -9,11 +9,10 @@ function moveUp() {
   water.style.transform = `translate(0%, ${100 - waterHeight}%)`;
 
   if (waterHeight >= 200) {
-    gameOverMsg.style.display = "block";
+    window.location.href = "/SharkTraining/GameOver.Html"; // Redirect to GameOver.html
     waterHeight = 0;
     setTimeout(() => {
       water.style.transform = `translate(0%, ${100 - waterHeight}%)`;
-      gameOverMsg.style.display = "none";
     }, 2000); // wait 2 seconds before resetting the animation
   }
 }
